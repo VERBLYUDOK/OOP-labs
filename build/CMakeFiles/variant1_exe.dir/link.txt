@@ -1,0 +1,1 @@
+/usr/local/bin/c++  -Werror=maybe-uninitialized CMakeFiles/variant1_exe.dir/variant1/main.cpp.o -o bin/variant1_exe  libvariant1_lib.a 
