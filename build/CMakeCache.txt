@@ -199,7 +199,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=variant1
+CMAKE_PROJECT_NAME:STATIC=OOP_labs
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.15.2
@@ -310,6 +310,15 @@ GTEST_HAS_ABSL:BOOL=OFF
 INSTALL_GTEST:BOOL=ON
 
 //Value Computed by CMake
+OOP_labs_BINARY_DIR:STATIC=/workspaces/lab1/build
+
+//Value Computed by CMake
+OOP_labs_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+OOP_labs_SOURCE_DIR:STATIC=/workspaces/lab1
+
+//Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/workspaces/lab1/build/_deps/googletest-build/googlemock
 
 //Value Computed by CMake
@@ -354,15 +363,6 @@ gtest_force_shared_crt:BOOL=OFF
 
 //Build gtest with internal symbols hidden in shared libraries.
 gtest_hide_internal_symbols:BOOL=OFF
-
-//Value Computed by CMake
-variant1_BINARY_DIR:STATIC=/workspaces/lab1/build
-
-//Value Computed by CMake
-variant1_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-variant1_SOURCE_DIR:STATIC=/workspaces/lab1
 
 
 ########################
@@ -503,7 +503,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

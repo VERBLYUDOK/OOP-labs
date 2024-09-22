@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /workspaces/lab1/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -172,43 +162,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named variant1_lib
+# Target rules for targets named lab1_test
 
 # Build rule for target.
-variant1_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 variant1_lib
-.PHONY : variant1_lib
+lab1_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab1_test
+.PHONY : lab1_test
 
 # fast build rule for target.
-variant1_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/variant1_lib.dir/build.make CMakeFiles/variant1_lib.dir/build
-.PHONY : variant1_lib/fast
-
-#=============================================================================
-# Target rules for targets named variant1_exe
-
-# Build rule for target.
-variant1_exe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 variant1_exe
-.PHONY : variant1_exe
-
-# fast build rule for target.
-variant1_exe/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/variant1_exe.dir/build.make CMakeFiles/variant1_exe.dir/build
-.PHONY : variant1_exe/fast
-
-#=============================================================================
-# Target rules for targets named tests_exe
-
-# Build rule for target.
-tests_exe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests_exe
-.PHONY : tests_exe
-
-# fast build rule for target.
-tests_exe/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_exe.dir/build.make CMakeFiles/tests_exe.dir/build
-.PHONY : tests_exe/fast
+lab1_test/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/lab1_test.dir/build.make tests/CMakeFiles/lab1_test.dir/build
+.PHONY : lab1_test/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -262,77 +226,31 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-variant1/main.o: variant1/main.cpp.o
-.PHONY : variant1/main.o
+#=============================================================================
+# Target rules for targets named OOP_labs_lib
 
-# target to build an object file
-variant1/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/variant1_exe.dir/build.make CMakeFiles/variant1_exe.dir/variant1/main.cpp.o
-.PHONY : variant1/main.cpp.o
+# Build rule for target.
+OOP_labs_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OOP_labs_lib
+.PHONY : OOP_labs_lib
 
-variant1/main.i: variant1/main.cpp.i
-.PHONY : variant1/main.i
+# fast build rule for target.
+OOP_labs_lib/fast:
+	$(MAKE) $(MAKESILENT) -f lab1_variant1/CMakeFiles/OOP_labs_lib.dir/build.make lab1_variant1/CMakeFiles/OOP_labs_lib.dir/build
+.PHONY : OOP_labs_lib/fast
 
-# target to preprocess a source file
-variant1/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/variant1_exe.dir/build.make CMakeFiles/variant1_exe.dir/variant1/main.cpp.i
-.PHONY : variant1/main.cpp.i
+#=============================================================================
+# Target rules for targets named lab1
 
-variant1/main.s: variant1/main.cpp.s
-.PHONY : variant1/main.s
+# Build rule for target.
+lab1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab1
+.PHONY : lab1
 
-# target to generate assembly for a file
-variant1/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/variant1_exe.dir/build.make CMakeFiles/variant1_exe.dir/variant1/main.cpp.s
-.PHONY : variant1/main.cpp.s
-
-variant1/src/countOnesBin.o: variant1/src/countOnesBin.cpp.o
-.PHONY : variant1/src/countOnesBin.o
-
-# target to build an object file
-variant1/src/countOnesBin.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/variant1_lib.dir/build.make CMakeFiles/variant1_lib.dir/variant1/src/countOnesBin.cpp.o
-.PHONY : variant1/src/countOnesBin.cpp.o
-
-variant1/src/countOnesBin.i: variant1/src/countOnesBin.cpp.i
-.PHONY : variant1/src/countOnesBin.i
-
-# target to preprocess a source file
-variant1/src/countOnesBin.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/variant1_lib.dir/build.make CMakeFiles/variant1_lib.dir/variant1/src/countOnesBin.cpp.i
-.PHONY : variant1/src/countOnesBin.cpp.i
-
-variant1/src/countOnesBin.s: variant1/src/countOnesBin.cpp.s
-.PHONY : variant1/src/countOnesBin.s
-
-# target to generate assembly for a file
-variant1/src/countOnesBin.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/variant1_lib.dir/build.make CMakeFiles/variant1_lib.dir/variant1/src/countOnesBin.cpp.s
-.PHONY : variant1/src/countOnesBin.cpp.s
-
-variant1/test/test1.o: variant1/test/test1.cpp.o
-.PHONY : variant1/test/test1.o
-
-# target to build an object file
-variant1/test/test1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_exe.dir/build.make CMakeFiles/tests_exe.dir/variant1/test/test1.cpp.o
-.PHONY : variant1/test/test1.cpp.o
-
-variant1/test/test1.i: variant1/test/test1.cpp.i
-.PHONY : variant1/test/test1.i
-
-# target to preprocess a source file
-variant1/test/test1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_exe.dir/build.make CMakeFiles/tests_exe.dir/variant1/test/test1.cpp.i
-.PHONY : variant1/test/test1.cpp.i
-
-variant1/test/test1.s: variant1/test/test1.cpp.s
-.PHONY : variant1/test/test1.s
-
-# target to generate assembly for a file
-variant1/test/test1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_exe.dir/build.make CMakeFiles/tests_exe.dir/variant1/test/test1.cpp.s
-.PHONY : variant1/test/test1.cpp.s
+# fast build rule for target.
+lab1/fast:
+	$(MAKE) $(MAKESILENT) -f lab1_variant1/CMakeFiles/lab1.dir/build.make lab1_variant1/CMakeFiles/lab1.dir/build
+.PHONY : lab1/fast
 
 # Help Target
 help:
@@ -346,23 +264,13 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... test"
+	@echo "... OOP_labs_lib"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... tests_exe"
-	@echo "... variant1_exe"
-	@echo "... variant1_lib"
-	@echo "... variant1/main.o"
-	@echo "... variant1/main.i"
-	@echo "... variant1/main.s"
-	@echo "... variant1/src/countOnesBin.o"
-	@echo "... variant1/src/countOnesBin.i"
-	@echo "... variant1/src/countOnesBin.s"
-	@echo "... variant1/test/test1.o"
-	@echo "... variant1/test/test1.i"
-	@echo "... variant1/test/test1.s"
+	@echo "... lab1"
+	@echo "... lab1_test"
 .PHONY : help
 
 
