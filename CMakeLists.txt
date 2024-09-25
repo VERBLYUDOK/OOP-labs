@@ -11,3 +11,4 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_subdirectory(tests)
 add_subdirectory(lab1_variant1)
+add_subdirectory(lab2_variant1)

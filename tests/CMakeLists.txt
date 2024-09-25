@@ -17,9 +17,18 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 enable_testing()
+include(GoogleTest)
 
 add_executable(lab1_test lab1_test.cpp)
 target_link_libraries(lab1_test ${CMAKE_PROJECT_NAME}_lib gtest_main)
 
+add_executable(lab2_test lab2_test.cpp ../lab2_variant1/src/decimal.cpp ../lab2_variant1/include/decimal.h)
+target_include_directories(lab2_test PRIVATE ../lab2_variant1/include)
+target_link_libraries(lab2_test gtest_main)
+
 # Добавление тестов в тестовый набор
-add_test(NAME MyProjectTests COMMAND lab1_test)
+add_test(NAME lab1_test COMMAND lab1_test)
+add_test(NAME lab2_test COMMAND lab2_test)
+
+gtest_discover_tests(lab1_test)
+gtest_discover_tests(lab2_test)
