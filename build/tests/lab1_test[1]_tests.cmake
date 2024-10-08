@@ -1,0 +1,7 @@
+add_test([=[test_01.basic_test_set]=]  /workspaces/lab1/build/bin/lab1_test [==[--gtest_filter=test_01.basic_test_set]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[test_01.basic_test_set]=]  PROPERTIES WORKING_DIRECTORY /workspaces/lab1/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[test_02.basic_test_set]=]  /workspaces/lab1/build/bin/lab1_test [==[--gtest_filter=test_02.basic_test_set]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[test_02.basic_test_set]=]  PROPERTIES WORKING_DIRECTORY /workspaces/lab1/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[test_03.basic_test_set]=]  /workspaces/lab1/build/bin/lab1_test [==[--gtest_filter=test_03.basic_test_set]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[test_03.basic_test_set]=]  PROPERTIES WORKING_DIRECTORY /workspaces/lab1/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  lab1_test_TESTS test_01.basic_test_set test_02.basic_test_set test_03.basic_test_set)

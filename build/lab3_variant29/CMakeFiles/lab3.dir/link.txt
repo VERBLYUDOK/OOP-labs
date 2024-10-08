@@ -1,0 +1,1 @@
+/usr/local/bin/c++  -Werror=maybe-uninitialized CMakeFiles/lab3.dir/main.cpp.o CMakeFiles/lab3.dir/src/Figure.cpp.o CMakeFiles/lab3.dir/src/Hexagon.cpp.o CMakeFiles/lab3.dir/src/Pentagon.cpp.o CMakeFiles/lab3.dir/src/Rhombus.cpp.o -o ../bin/lab3 
