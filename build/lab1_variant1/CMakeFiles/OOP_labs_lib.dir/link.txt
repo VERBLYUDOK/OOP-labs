@@ -1,2 +1,0 @@
-/usr/bin/ar qc libOOP_labs_lib.a CMakeFiles/OOP_labs_lib.dir/src/countOnesBin.cpp.o
-/usr/bin/ranlib libOOP_labs_lib.a

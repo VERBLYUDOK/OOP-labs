@@ -1,1 +1,0 @@
-/usr/local/bin/c++  -Werror=maybe-uninitialized CMakeFiles/lab2_test.dir/lab2_test.cpp.o CMakeFiles/lab2_test.dir/__/lab2_variant1/src/decimal.cpp.o -o ../bin/lab2_test  ../lib/libgtest_main.a ../lib/libgtest.a 
