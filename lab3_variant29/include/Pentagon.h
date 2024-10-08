@@ -24,8 +24,6 @@ public:
     double Area() const override;
     double getCenterX() const;
     double getCenterY() const;
-    const double* getXCoords() const;
-    const double* getYCoords() const;
 
     Pentagon& operator=(const Figure&) override;
     Pentagon& operator=(Figure&&) noexcept override;

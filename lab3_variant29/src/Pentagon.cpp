@@ -168,11 +168,3 @@ double Pentagon::getCenterX() const {
 double Pentagon::getCenterY() const {
     return y_center_;
 }
-
-const double* Pentagon::getXCoords() const {
-    return x_coords_;
-}
-
-const double* Pentagon::getYCoords() const {
-    return y_coords_;
-}

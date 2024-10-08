@@ -168,11 +168,3 @@ double Rhombus::getCenterX() const {
 double Rhombus::getCenterY() const {
     return y_center_;
 }
-
-const double* Rhombus::getXCoords() const {
-    return x_coords_;
-}
-
-const double* Rhombus::getYCoords() const {
-    return y_coords_;
-}

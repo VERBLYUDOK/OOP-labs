@@ -24,8 +24,6 @@ public:
     double Area() const override;
     double getCenterX() const;
     double getCenterY() const;
-    const double* getXCoords() const;
-    const double* getYCoords() const;
 
     Rhombus& operator=(const Figure&) override;
     Rhombus& operator=(const Rhombus&);

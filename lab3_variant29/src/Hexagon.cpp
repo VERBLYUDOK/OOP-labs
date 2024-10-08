@@ -168,11 +168,3 @@ double Hexagon::getCenterX() const {
 double Hexagon::getCenterY() const {
     return y_center_;
 }
-
-const double* Hexagon::getXCoords() const {
-    return x_coords_;
-}
-
-const double* Hexagon::getYCoords() const {
-    return y_coords_;
-}

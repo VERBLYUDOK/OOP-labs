@@ -82,14 +82,17 @@ TEST(HexagonTest, MoveAssignmentOperator) {
     double x_coords[] = {0, 1, 2, 2, 1, 0};
     double y_coords[] = {0, 0, 1, 2, 2, 1};
 
-    Figure* hex1 = new Hexagon(x_coords, y_coords);
+    Figure* Hex1 = new Hexagon(x_coords, y_coords);
 
-    Figure* hex2 = new Hexagon();
+    Figure* Hex2 = new Hexagon();
 
-    *hex2 = std::move(*hex1);
+    *Hex2 = std::move(*Hex1);
 
-    Hexagon expected_hex(x_coords, y_coords);
-    EXPECT_TRUE(*hex2 == expected_hex);
+    Hexagon Expected_hex(x_coords, y_coords);
+    EXPECT_TRUE(*Hex2 == Expected_hex);
+
+    delete Hex1;
+    delete Hex2;
 }
 
 int main(int argc, char** argv) {
