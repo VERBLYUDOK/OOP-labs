@@ -1,7 +1,0 @@
-add_test([=[DecimalTest.ConstructorFromString]=]  /workspaces/lab1/build/bin/lab2_test [==[--gtest_filter=DecimalTest.ConstructorFromString]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[DecimalTest.ConstructorFromString]=]  PROPERTIES WORKING_DIRECTORY /workspaces/lab1/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[DecimalTest.Addition]=]  /workspaces/lab1/build/bin/lab2_test [==[--gtest_filter=DecimalTest.Addition]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[DecimalTest.Addition]=]  PROPERTIES WORKING_DIRECTORY /workspaces/lab1/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[DecimalTest.Subtraction]=]  /workspaces/lab1/build/bin/lab2_test [==[--gtest_filter=DecimalTest.Subtraction]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[DecimalTest.Subtraction]=]  PROPERTIES WORKING_DIRECTORY /workspaces/lab1/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  lab2_test_TESTS DecimalTest.ConstructorFromString DecimalTest.Addition DecimalTest.Subtraction)
