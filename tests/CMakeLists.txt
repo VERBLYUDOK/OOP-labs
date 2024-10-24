@@ -30,11 +30,17 @@ add_executable(lab3_test lab3_test.cpp ../lab3_variant29/src/Figure.cpp ../lab3_
 target_include_directories(lab3_test PRIVATE ../lab3_variant29/include)
 target_link_libraries(lab3_test PRIVATE gtest_main)
 
+add_executable(lab4_test lab4_test.cpp ../lab4_variant29/src/Figure.tpp ../lab4_variant29/src/Hexagon.tpp ../lab4_variant29/src/Pentagon.tpp ../lab4_variant29/src/Rhombus.tpp ../lab4_variant29/include/Figure.h ../lab4_variant29/include/Hexagon.h ../lab4_variant29/include/Pentagon.h ../lab4_variant29/include/Rhombus.h ../lab4_variant29/include/Point.h ../lab4_variant29/include/Array.h ../lab4_variant29/src/Array.tpp ../lab4_variant29/src/Point.tpp)
+target_include_directories(lab4_test PRIVATE ../lab4_variant29/include)
+target_link_libraries(lab4_test PRIVATE gtest_main)
+
 # Добавление тестов в тестовый набор
 add_test(NAME lab1_test COMMAND lab1_test)
 add_test(NAME lab2_test COMMAND lab2_test)
 add_test(NAME lab3_test COMMAND lab3_test)
+add_test(NAME lab4_test COMMAND lab4_test)
 
 gtest_discover_tests(lab1_test)
 gtest_discover_tests(lab2_test)
 gtest_discover_tests(lab3_test)
+gtest_discover_tests(lab4_test)
