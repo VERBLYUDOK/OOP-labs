@@ -1,2 +1,0 @@
-/usr/bin/ar qc libvariant1_lib.a CMakeFiles/variant1_lib.dir/variant1/src/countOnesBin.cpp.o
-/usr/bin/ranlib libvariant1_lib.a
