@@ -9,6 +9,5 @@ add_executable(lab6
     src/factory.cpp
 )
 
-
 target_include_directories(lab6 PRIVATE include)
 
