@@ -38,15 +38,30 @@ add_executable(lab5_test lab5_test.cpp ../lab5_variant1/src/FixedMemoryResource.
 target_include_directories(lab5_test PRIVATE ../lab5_variant1/include)
 target_link_libraries(lab5_test PRIVATE gtest_main)
 
+add_executable(lab6_test
+    lab6_test.cpp
+    ../lab6_variant9/src/npc.cpp
+    ../lab6_variant9/src/elf.cpp
+    ../lab6_variant9/src/dragon.cpp
+    ../lab6_variant9/src/druid.cpp
+    ../lab6_variant9/src/visitor.cpp
+    ../lab6_variant9/src/observer.cpp
+    ../lab6_variant9/src/factory.cpp
+)
+target_include_directories(lab6_test PRIVATE ../lab6_variant9/include)
+target_link_libraries(lab6_test PRIVATE gtest_main)
+
 # Добавление тестов в тестовый набор
 add_test(NAME lab1_test COMMAND lab1_test)
 add_test(NAME lab2_test COMMAND lab2_test)
 add_test(NAME lab3_test COMMAND lab3_test)
 add_test(NAME lab4_test COMMAND lab4_test)
 add_test(NAME lab5_test COMMAND lab5_test)
+add_test(NAME lab6_test COMMAND lab6_test)
 
 gtest_discover_tests(lab1_test)
 gtest_discover_tests(lab2_test)
 gtest_discover_tests(lab3_test)
 gtest_discover_tests(lab4_test)
 gtest_discover_tests(lab5_test)
+gtest_discover_tests(lab6_test)
