@@ -9,9 +9,8 @@
 #include <cmath>
 #include <set>
 #include <algorithm>
-
-struct Visitor;
-struct Observer;
+#include "observer.h"
+#include "visitor.h"
 
 enum class NpcType {
     Unknown = 0,
