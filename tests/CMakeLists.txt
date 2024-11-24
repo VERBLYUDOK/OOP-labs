@@ -34,13 +34,19 @@ add_executable(lab4_test lab4_test.cpp ../lab4_variant29/src/Figure.tpp ../lab4_
 target_include_directories(lab4_test PRIVATE ../lab4_variant29/include)
 target_link_libraries(lab4_test PRIVATE gtest_main)
 
+add_executable(lab5_test lab5_test.cpp ../lab5_variant1/src/FixedMemoryResource.cpp ../lab5_variant1/src/PmrVector.tpp ../lab5_variant1/include/FixedMemoryResource.h ../lab5_variant1/include/PmrVector.h)
+target_include_directories(lab5_test PRIVATE ../lab5_variant1/include)
+target_link_libraries(lab5_test PRIVATE gtest_main)
+
 # Добавление тестов в тестовый набор
 add_test(NAME lab1_test COMMAND lab1_test)
 add_test(NAME lab2_test COMMAND lab2_test)
 add_test(NAME lab3_test COMMAND lab3_test)
 add_test(NAME lab4_test COMMAND lab4_test)
+add_test(NAME lab5_test COMMAND lab5_test)
 
 gtest_discover_tests(lab1_test)
 gtest_discover_tests(lab2_test)
 gtest_discover_tests(lab3_test)
 gtest_discover_tests(lab4_test)
+gtest_discover_tests(lab5_test)
