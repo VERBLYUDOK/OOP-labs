@@ -6,17 +6,11 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include <cmath>
-#include <set>
-#include <algorithm>
 #include <mutex>
 #include <shared_mutex>
 #include "observer.h"
 #include "visitor.h"
 #include "task.h"
-
-struct Visitor;
-struct Observer;
 
 enum class NpcType {
     Unknown = 0,

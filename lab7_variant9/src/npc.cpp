@@ -3,7 +3,7 @@
 #include "scheduler.h"
 #include "factory.h"
 #include "logger.h"
-#include <random>
+#include <random> 
 #include <atomic>
 
 // Объявляем внешние переменные
