@@ -13,4 +13,4 @@ struct Druid : public NPC {
     void save(std::ostream& os) const override;
 };
 
-#endif
+#endif 

@@ -11,6 +11,9 @@
 #include <algorithm>
 #include <mutex>
 #include <shared_mutex>
+#include "observer.h"
+#include "visitor.h"
+#include "task.h"
 
 struct Visitor;
 struct Observer;
@@ -42,8 +45,12 @@ struct NPC : public std::enable_shared_from_this<NPC> {
     bool isClose(const std::shared_ptr<NPC>& other, size_t distance) const;
 
     virtual void print() const;
+
+    Task run(); // Метод запуска корутины для NPC
+
     virtual void save(std::ostream& os) const;
     static std::shared_ptr<NPC> load(std::istream& is);
+
 private:
     std::vector<std::weak_ptr<Observer>> observers;
 };

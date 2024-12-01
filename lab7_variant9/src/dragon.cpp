@@ -13,7 +13,7 @@ void Dragon::print() const {
         std::cout << "Dragon - Name: " << name
                   << ", Coordinates: (" << x << ", " << y << ")" << std::endl;
     }
-}
+} 
 
 void Dragon::save(std::ostream& os) const {
     NPC::save(os);
